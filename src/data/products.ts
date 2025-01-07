@@ -141,7 +141,7 @@ export const products = [
   },
   {
     id: 'soguk-baklava',
-    category: 'serbetli',
+    category: 'sutlu',
     name: "Soğuk Baklava",
     description: "Soğuk servis edilen, fıstıklı ve şerbetli baklava.",
     price: "950,00 TL/kg",
