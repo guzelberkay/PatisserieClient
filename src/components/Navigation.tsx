@@ -26,7 +26,7 @@ export default function Navigation() {
     };
 
     return (
-        <nav className="p-6 bg-white shadow-md">
+        <nav className="p-6">
             <div className="flex justify-between items-center">
                 {/* Logo */}
                 <div className="text-2xl font-bold text-amber-900">
@@ -44,9 +44,9 @@ export default function Navigation() {
 
             {/* Menü öğeleri */}
             <ul
-                className={`lg:flex flex-col lg:flex-row gap-8 mt-4 lg:mt-0 p-4 bg-white absolute lg:relative w-full lg:w-auto top-0 left-0 transition-transform ${
+                className={`lg:flex flex-col lg:flex-row gap-8 mt-4 lg:mt-0 p-4 absolute lg:relative w-full lg:w-auto top-0 left-0 transition-transform ${
                     isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full'
-                } lg:transform-none lg:block`}
+                } lg:transform-none lg:block bg-transparent`}
             >
                 {navItems.map(({ href, label }) => (
                     <li key={href} className="relative group">

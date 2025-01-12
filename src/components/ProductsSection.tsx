@@ -68,9 +68,15 @@ export default function ProductsSection() {
             </div>
 
             {/* Ürünler */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-16">
                 {filteredProducts.map((product) => (
-                    <ProductCard key={product.id} {...product} />
+                    <ProductCard
+                        key={product.id}
+                        name={product.name}
+                        description={product.description}
+                        price={product.price}
+                        imageUrl={product.imageUrl}
+                    />
                 ))}
             </div>
         </section>

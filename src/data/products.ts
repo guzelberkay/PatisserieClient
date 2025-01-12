@@ -3,7 +3,8 @@ import susamliPogacaImage from "../images/susamli_pogaca.jpg";
 import peynirliPogacaImage from "../images/peynirli_pogaca.jpg";
 import dereotluPogacaImage from "../images/dereotlu_pogaca.jpeg";
 import kiymaliPogacaImage from "../images/kiymali_pogaca.jpg";
-import sakalliPogacaImage from  "../images/sakalli-pogaça.jpg"
+import sakalliPogacaImage from  "../images/sakalli-pogaça.jpg";
+import konusankekImage from "../images/konusankek.jpg";
 
 import patatesliPogacaImage from "../images/patatesli_pogaca.jpg";
 import zeytinliPagacaImage from "../images/zeytinli_pogaca.jpeg";
@@ -15,7 +16,15 @@ import patatesliAcmaImage from "../images/patatesli-acma.jpeg";
 import kasarliAcmaImage from "../images/kasarli_acma.png";
 import kiymaliAcmaImage from "../images/kiymali_acma.jpg";
 import sandvicImage from  "../images/sandvic.jpg";
-
+import gullac from  "../images/gullac.jpg";
+import supangle from "../images/supangle.png";
+import magnolya from "../images/magnolya.jpg"
+import ekler from "../images/ekler.jpg"
+import profiterol from "../images/profiterol.jpg"
+import trilece from "../images/trilece.jpg";
+import indiana from "../images/indiana.jpg";
+import sutdilimi from "../images/sutdilimi.jpg";
+import izmirbombasi from "../images/izmirbombasi.jpeg"
 
 
 import sadeAcmaImage from  "../images/sade_acma.jpeg";
@@ -30,6 +39,36 @@ import burmaBaklava from "../images/burma_baklava.jpg";
 import sogukBaklava from "../images/soguk_baklava.jpg";
 import bulbulyuvasi from "../images/bulbulyuvasi.jpg";
 import kadayif from "../images/kadayif.jpg";
+import o1pasta from "../images/o1-pasta.jpg";
+import o2pasta from "../images/o2-pasta.jpg";
+import o3pasta from "../images/o3-pasta.jpg";
+import o4pasta from "../images/o4-pasta.jpg";
+import o5pasta from "../images/o5-pasta.jpg";
+import o6pasta from "../images/o6-pasta.jpg";
+import o7pasta from "../images/o7-pasta.jpg";
+import o8pasta from "../images/o8-pasta.jpg";
+import o9pasta from "../images/o9-pasta.jpg";
+import o10pasta from "../images/o10-pasta.jpg";
+import o11pasta from "../images/o11-pasta.png";
+import o12pasta from "../images/o12-pasta.png";
+import o13pasta from "../images/o13-pasta.png";
+import o14pasta from "../images/o14-pasta.png";
+import o16pasta from "../images/o16-pasta.png";
+import o17pasta from "../images/o17-pasta.png";
+import o18pasta from "../images/o18-pasta.png";
+import o19pasta from "../images/o19-pasta.jpg";
+import s1pasta from "../images/s1-pasta.png"
+import s2pasta from "../images/s2-pasta.png"
+import s3pasta from "../images/s3-pasta.png"
+import s4pasta from "../images/s5-pasta.jpg"
+import s5pasta from "../images/s5-pasta.png"
+import s6pasta from "../images/s6-pasta.jpg"
+import s7pasta from "../images/s7-pasta.jpg"
+import t1kurabiye from "../images/t1-kurabiye.jpg"
+import t2kurabiye from "../images/t2-kurabiye.jpg"
+import t3kurabiye from "../images/t3-kurabiye.jpg"
+import t4kurabiye from "../images/t4-kurabiye.jpg"
+
 
 export const products = [
   {
@@ -225,6 +264,46 @@ export const products = [
     imageUrl: sogukBaklava
   },
   {
+    id: 'gullac',
+    category: 'sutlu',
+    name: "Güllaç",
+    description: "Sütle ıslatılmış hafif hamur yaprakları ve gül suyu aromasıyla damakta ferahlatıcı bir tat bırakır.",
+    imageUrl: gullac
+  },
+  {
+    id: 'trilece',
+    category: 'sutlu',
+    name: "Trileçe",
+    price: "60,00 TL/Adet",
+    description: "Trileçe, yoğun sütlü kreması ve hafif yapısıyla damakları şımartacak bir tatlı! Her dilimde enfes bir lezzet deneyimi!",
+    imageUrl: trilece
+  },
+  {
+    id: 'supangle',
+    category: 'sutlu',
+    name: "Supangle",
+    price: "75,00 TL/Adet",
+
+    description: "Supangle, yoğun çikolata tadı ve kremsi dokusuyla sizi fethedecek mükemmel bir tatlı!",
+    imageUrl: supangle
+  },
+  {
+    id: 'profiterol',
+    category: 'sutlu',
+    name: "Profiterol",
+    price: "75,00 TL/Adet",
+    description: "Profiterol, hafif hamuru ve bol kremasıyla her lokmada lezzet patlaması!",
+    imageUrl: profiterol
+  },
+  {
+    id: 'magnolya',
+    category: 'sutlu',
+    name: "Magnolya",
+    price: "75,00 TL/Adet",
+    description: "Magnolya, vanilya ve çilek veya muzun lezzetli birleşimiyle kremsi bir tatlı şöleni sunar!",
+    imageUrl: magnolya
+  },
+  {
     id: 'kadayif',
     category: 'serbetli',
     name: "Kadayıf",
@@ -253,5 +332,223 @@ export const products = [
     description: "Kıymalı iç harcıyla zenginleşen, yumuşak ve lezzetli açma.",
     price: "40,00 TL/Adet",
     imageUrl: sandvicImage
-  }
+  },
+  {
+    id: "o1-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o1pasta
+  },
+  {
+    id: "o2-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o2pasta
+  },
+  {
+    id: "o3-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o3pasta
+  },
+  {
+    id: "o4-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o4pasta
+  },
+  {
+    id: "o5-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o5pasta
+  },
+  {
+    id: "o6-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o6pasta
+  },
+  {
+    id: "o7-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o7pasta
+  },
+  {
+    id: "o8-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o8pasta
+  },
+  {
+    id: "o9-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o9pasta
+  },
+  {
+    id: "o10-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o10pasta
+  },
+
+  {
+    id: "o11-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o11pasta
+  },
+
+  {
+    id: "o12-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o12pasta
+  },
+
+  {
+    id: "o13-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o13pasta
+  },
+
+  {
+    id: "o14-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o14pasta
+  },
+
+  {
+    id: "o16-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o16pasta
+  },
+
+  {
+    id: "o17-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o17pasta
+  },
+
+  {
+    id: "o18-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o18pasta
+  },
+
+  {
+    id: "o19-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o19pasta
+  },
+  {
+    id: "s7-pasta",
+    category: "sabit-pastalar",
+    name: "Yaş Pasta (8-10 Kişilik)",
+    price: "500,00 TL/Adet",
+    imageUrl: s7pasta
+  },
+  {
+    id: "s4-pasta",
+    category: "sabit-pastalar",
+    name: "Yaş Pasta (4-6 Kişilik)",
+    price: "400,00 TL/Adet",
+    imageUrl: s4pasta
+  },
+  {
+    id: "s6-pasta",
+    category: "sabit-pastalar",
+    name: "Yaş Pasta (4-6 Kişilik)",
+    price: "400,00 TL/Adet",
+    imageUrl: s6pasta
+  },
+  {
+    id: "s2-pasta",
+    category: "sabit-pastalar",
+    name: "Yaş Pasta (1-2 Kişilik)",
+    price: "75,00 TL/Adet",
+    imageUrl: s2pasta
+  },
+  {
+    id: "s5-pasta",
+    category: "sabit-pastalar",
+    name: "Yaş Pasta (1-2 Kişilik)",
+    price: "75,00 TL/Adet",
+    imageUrl: s5pasta
+  },
+  {
+    id: "s1-pasta",
+    category: "sabit-pastalar",
+    name: "Dilim Rulo Pasta",
+    price: "75,00 TL/Adet",
+    imageUrl: s1pasta
+  },
+
+  {
+    id: "s3-pasta",
+    category: "sabit-pastalar",
+    name: "Dilim Baton Pasta",
+    price: "75,00 TL/Adet",
+    imageUrl: s3pasta
+  },
+  {
+    id: "ekler-pasta",
+    category: "sabit-pastalar",
+    name: "Ekler",
+    description: "Ekler Pasta, çıtır hamuru ve kremsi iç dolgusu ile mükemmel bir tatlı deneyimi sunar. ",
+    price: "400,00 TL/Kg",
+    imageUrl: ekler
+  },
+  {
+    id: "indiana-pasta",
+    category: "sabit-pastalar",
+    name: "İndiana",
+    description: "Yumuşacık kek katmanları ve kremalı iç dolgusu ile klasik lezzetlerin en iyisi. Her lokmada mükemmel bir tat!",
+    price: "30,00 TL/Adet",
+    imageUrl: indiana
+  },
+  {
+    id: "sutdilimi-pasta",
+    category: "sabit-pastalar",
+    name: "Süt Dilimi",
+    description: "Süt Dilimi, kremalı iç dolgusu ve yumuşacık kekiyle tam bir lezzet şöleni. Her lokma, tatlı bir mutluluk!",
+    price: "400,00 TL/Kg",
+    imageUrl: sutdilimi
+  },
+  {
+    id: "t1-kurabiye",
+    category: "kurabiye",
+    name: "Tatlı Kurabiyelerimiz",
+    imageUrl: t1kurabiye
+  },
+  {
+    id: "t2-kurabiye",
+    category: "kurabiye",
+    name: "Tatlı Kurabiyelerimiz",
+    imageUrl: t2kurabiye
+  },
+  {
+    id: "t3-kurabiye",
+    category: "kurabiye",
+    name: "Tatlı Kurabiyelerimiz",
+    imageUrl: t3kurabiye
+  },
+  {
+    id: "t4-kurabiye",
+    category: "kurabiye",
+    name: "Tatlı Kurabiyelerimiz",
+    imageUrl: t4kurabiye
+  },
+  {
+    id: "izmirbombasi-kurabiye",
+    category: "kurabiye",
+    name: "İzmir Bombası",
+    price: "30,00 TL/Adet",
+    description: "İzmir Bombası, çıtır dışı ve akışkan çikolatalı içiyle her ısırıkta sizi fethedecek! Sıcak ve taze, mükemmel bir tatlı keyfi!",
+    imageUrl: izmirbombasi
+  },
+  {
+    id: "konusankek",
+    category: "kurabiye",
+    name: "Konuşan Kek",
+    price: "100,00 TL/Adet",
+    description: "Konuşan Kek, yumuşacık dokusu ve hafif lezzetiyle her lokmada sizi mutlu edecek! Tadına doyamayacağınız, pratik ve lezzetli bir tatlı.",
+    imageUrl: konusankekImage
+  },
+
+
+
+
+
+
 ];

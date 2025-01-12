@@ -20,11 +20,16 @@ export const categories = [
     description: 'Taze malzemelerle hazırlanmış, doyurucu ve lezzetli sandviç çeşitleri'
   },
   {
-    id: 'pasta',
-    name: 'Pastalarımız',
-    description: 'Lezzetli Türk pastaları ve tatlı seçenekleri',
-    items: ['Ekler', 'Alman Pastası', 'Profiterol']
+    id: 'sabit-pastalar',
+    name: 'Standart Pastalar',
+    description: 'Her zaman ürettiğimiz, klasik ve vazgeçilmez lezzetler',
   },
+  {
+    id: 'ozel-tasarim-pastalar',
+    name: 'Özel Tasarım Pastalar',
+    description: 'Müşteri isteklerine göre hazırlanan, tamamen kişiye özel pastalar',
+  },
+
   {
     id: 'kurabiye',
     name: 'Kurabiyelerimiz',
