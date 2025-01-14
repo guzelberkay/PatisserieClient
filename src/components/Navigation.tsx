@@ -36,7 +36,7 @@ export default function Navigation() {
                 {/* Menü açma butonu (mobilde) */}
                 <button
                     onClick={toggleMenu}
-                    className="lg:hidden text-3xl text-amber-900"
+                    className="lg:hidden text-3xl text-amber-900 focus:outline-none"
                 >
                     ☰
                 </button>
@@ -44,15 +44,15 @@ export default function Navigation() {
 
             {/* Menü öğeleri */}
             <ul
-                className={`lg:flex flex-col lg:flex-row gap-8 mt-4 lg:mt-0 p-4 absolute lg:relative w-full lg:w-auto top-0 left-0 transition-transform ${
-                    isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full'
-                } lg:transform-none lg:block bg-transparent`}
+                className={`lg:flex flex-col lg:flex-row gap-8 mt-4 lg:mt-0 p-4 absolute lg:relative w-full lg:w-auto top-0 left-0 transition-all duration-300 ease-in-out transform ${
+                    isMenuOpen ? 'translate-x-0 bg-white shadow-lg' : '-translate-x-full'
+                } lg:transform-none lg:block bg-transparent rounded-lg lg:rounded-none`}
             >
                 {navItems.map(({ href, label }) => (
                     <li key={href} className="relative group">
                         <a
                             href={href}
-                            className="text-2xl font-semibold text-amber-900 transition-all duration-300 hover:text-amber-700"
+                            className="text-2xl font-semibold text-amber-900 transition-all duration-300 hover:text-amber-700 block py-2"
                             onClick={(e) => {
                                 e.preventDefault(); // Sayfa yeniden yüklenmesin
                                 handleMenuItemClick(href); // Yönlendirme ve kaydırma işlemi

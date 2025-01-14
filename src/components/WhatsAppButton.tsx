@@ -10,15 +10,15 @@ export default function WhatsAppButton() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="fixed bottom-6 right-6 bg-green-600 text-white p-4 rounded-full shadow-xl hover:bg-green-700 transition-all duration-300 z-50 flex items-center justify-center gap-3"
+            className="fixed bottom-6 right-6 bg-[#29A71A] text-white p-4 rounded-full shadow-xl  transition-all duration-300 z-50 flex items-center justify-center gap-3"
             aria-label="WhatsApp ile iletişime geçin"
         >
             <img
-                src={whatsapp}  // WhatsApp simgesini doğru şekilde buraya ekleyin
+                src={whatsapp}
                 alt="WhatsApp"
-                className="h-12 w-12 object-contain" // Simgeyi profesyonel boyutlarda ve uyumlu hale getirdik
+                className="h-12 w-12 object-contain"
             />
-            <span className="hidden md:inline font-medium text-lg">Bize Ulaşın</span> {/* Yazıyı büyüttük */}
+            <span className="hidden md:inline font-medium text-lg">Bize Ulaşın</span>
         </a>
     );
 }

@@ -331,7 +331,7 @@ export const products = [
     id: "sandvic",
     category: "sandvic",
     name: "Sandviç",
-    description: "Kıymalı iç harcıyla zenginleşen, yumuşak ve lezzetli açma.",
+    description: "Lezzetli ve doyurucu sandviçlerimiz, taze malzemelerle hazırlanır. Her ısırıkta tazelik ve tat!",
     price: "40,00 TL/Adet",
     imageUrl: sandvicImage
   },
