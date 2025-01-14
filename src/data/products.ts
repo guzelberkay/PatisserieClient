@@ -62,7 +62,7 @@ import o19pasta from "../images/o19-pasta.jpg";
 import s1pasta from "../images/s1-pasta.jpg"
 import s2pasta from "../images/s2-pasta.jpg"
 import s3pasta from "../images/s3-pasta.jpg"
-import s4pasta from "../images/s5-pasta.jpg"
+import o20pasta from  "../images/o20-pasta.jpg";
 import s5pasta from "../images/s5-pasta.jpg"
 import s6pasta from "../images/s6-pasta.jpg"
 import s7pasta from "../images/s7-pasta.jpg"
@@ -432,6 +432,11 @@ export const products = [
     id: "o19-pasta",
     category: "ozel-tasarim-pastalar",
     imageUrl: o19pasta
+  },
+  {
+    id: "o20-pasta",
+    category: "ozel-tasarim-pastalar",
+    imageUrl: o20pasta
   },
   {
     id: "s7-pasta",
