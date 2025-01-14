@@ -5,9 +5,25 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Sayfanın yatay kaymasını tamamen engelle */
   }
-  
+
   body {
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden; /* Taşma sorununu engelle */
+  }
+
+  * {
+    box-sizing: border-box; /* Taşmayı engellemek için tüm öğelerde kutu modelini ayarla */
+  }
+
+  img {
+    max-width: 100%; /* Görsellerin taşmasını önler */
+    height: auto;
+  }
+
+  .container {
+    max-width: 100%; /* Genel kapsayıcıların taşmasını engeller */
+    overflow-x: hidden;
   }
 }
