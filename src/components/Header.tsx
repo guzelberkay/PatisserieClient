@@ -1,6 +1,6 @@
 import Navigation from './Navigation';
 import { SITE_CONFIG } from '../constants/config';
-import Logo from '../images/Logo.png'
+import Logo from '../images/Logo.ico'
 
 export default function Header() {
   return (
