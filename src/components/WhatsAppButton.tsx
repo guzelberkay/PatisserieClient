@@ -1,5 +1,5 @@
 import { SITE_CONFIG } from '../constants/config';
-import whatsapp from "../images/whatsapp.png"; // WhatsApp simgesini doğru şekilde içe aktardığınızdan emin olun
+import whatsapp from "../images/whatsapp.ico"; // WhatsApp simgesini doğru şekilde içe aktardığınızdan emin olun
 
 export default function WhatsAppButton() {
     const message = "Merhaba! Pasta ürünleriniz hakkında bilgi almak istiyorum. Hangi ürünü sorabilirim?";
