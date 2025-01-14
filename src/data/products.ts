@@ -19,7 +19,7 @@ import kasarliAcmaImage from "../images/kasarli_acma.jpg";
 import kiymaliAcmaImage from "../images/kiymali_acma.jpg";
 import sandvicImage from  "../images/sandvic.jpg";
 import gullac from  "../images/gullac.jpg";
-import supangle from "../images/supangle.png";
+import supangle from "../images/supangle.jpg";
 import magnolya from "../images/magnolya.jpg"
 import ekler from "../images/ekler.jpg"
 import profiterol from "../images/profiterol.jpg"
@@ -59,11 +59,11 @@ import o16pasta from "../images/o16-pasta.jpg";
 import o17pasta from "../images/o17-pasta.jpg";
 import o18pasta from "../images/o18-pasta.jpg";
 import o19pasta from "../images/o19-pasta.jpg";
-import s1pasta from "../images/s1-pasta.png"
-import s2pasta from "../images/s2-pasta.png"
-import s3pasta from "../images/s3-pasta.png"
+import s1pasta from "../images/s1-pasta.jpg"
+import s2pasta from "../images/s2-pasta.jpg"
+import s3pasta from "../images/s3-pasta.jpg"
 import s4pasta from "../images/s5-pasta.jpg"
-import s5pasta from "../images/s5-pasta.png"
+import s5pasta from "../images/s5-pasta.jpg"
 import s6pasta from "../images/s6-pasta.jpg"
 import s7pasta from "../images/s7-pasta.jpg"
 import t1kurabiye from "../images/t1-kurabiye.jpg"
