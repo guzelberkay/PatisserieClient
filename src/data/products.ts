@@ -13,7 +13,9 @@ import zeytinliAcmaImage from "../images/zeytinli-acma.jpg";
 import pizzaAcmaImage from "../images/pizza-acma.jpg";
 import peynirliAcmaImage from "../images/peynirli_acma.jpeg";
 import patatesliAcmaImage from "../images/patatesli-acma.jpeg";
-import kasarliAcmaImage from "../images/kasarli_acma.png";
+
+import kasarliAcmaImage from "../images/kasarli_acma.jpg";
+
 import kiymaliAcmaImage from "../images/kiymali_acma.jpg";
 import sandvicImage from  "../images/sandvic.jpg";
 import gullac from  "../images/gullac.jpg";
@@ -34,7 +36,7 @@ import peynirliBorekImage from  "../images/peynirli-kol-boregi.jpg";
 import peynirliSuBorekImage from  "../images/peynirli-su-boregi.jpg";
 import tulumba from "../images/tuluba.jpg";
 import cevizliBaklava from "../images/cevizli_baklava.jpg";
-import fistikliBaklava from "../images/fistikli_baklava.png";
+import fistikliBaklava from "../images/fistikli_baklava.jpg";
 import burmaBaklava from "../images/burma_baklava.jpg";
 import sogukBaklava from "../images/soguk_baklava.jpg";
 import bulbulyuvasi from "../images/bulbulyuvasi.jpg";
