@@ -445,7 +445,7 @@ export const products = [
     category: "sabit-pastalar",
     name: "Yaş Pasta (4-6 Kişilik)",
     price: "400,00 TL/Adet",
-    imageUrl: s4pasta
+    imageUrl: s7pasta
   },
   {
     id: "s6-pasta",
