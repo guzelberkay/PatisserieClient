@@ -6,7 +6,7 @@ export default function HeroSection() {
         <div className="relative h-[600px]">
             {/* Görsel */}
             <img
-                src={tezgah} // Doğru özellik: `src`
+                src={tezgah}
                 className="w-full h-full object-cover"
             />
             {/* Üstüne yerleştirilen içerik */}
