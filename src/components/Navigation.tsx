@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const navItems = [
     { href: '#products', label: 'Ürünlerimiz' },
@@ -8,6 +8,8 @@ const navItems = [
 
 export default function Navigation() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const menuRef = useRef<HTMLUListElement | null>(null); // Menü elemanını referans alıyoruz
+    const buttonRef = useRef<HTMLButtonElement | null>(null); // Menü butonunu referans alıyoruz
 
     // Menü açma ve kapama fonksiyonu
     const toggleMenu = () => {
@@ -25,6 +27,25 @@ export default function Navigation() {
         }
     };
 
+    // Menü dışında bir yere tıklanması durumunda menüyü kapatma
+    useEffect(() => {
+        // Dışarıya tıklandığında menüyü kapat
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                menuRef.current && !menuRef.current.contains(event.target as Node) &&
+                buttonRef.current && !buttonRef.current.contains(event.target as Node)
+            ) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
     return (
         <nav className="p-6">
             <div className="flex justify-between items-center">
@@ -35,6 +56,7 @@ export default function Navigation() {
 
                 {/* Menü açma butonu (mobilde) */}
                 <button
+                    ref={buttonRef}
                     onClick={toggleMenu}
                     className="lg:hidden text-3xl text-amber-900 focus:outline-none"
                 >
@@ -44,6 +66,7 @@ export default function Navigation() {
 
             {/* Menü öğeleri */}
             <ul
+                ref={menuRef}
                 className={`lg:flex flex-col lg:flex-row gap-8 mt-4 lg:mt-0 p-4 absolute lg:relative w-full lg:w-auto top-0 left-0 transition-all duration-300 ease-in-out transform ${
                     isMenuOpen ? 'translate-x-0 bg-white shadow-lg' : '-translate-x-full'
                 } lg:transform-none lg:block bg-transparent rounded-lg lg:rounded-none`}

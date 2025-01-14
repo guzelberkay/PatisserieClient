@@ -7,6 +7,9 @@ import { useState, useRef } from 'react';
 export default function ProductsSection() {
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
     const sliderRef = useRef<HTMLDivElement | null>(null);
+    const isMouseDown = useRef(false); // Mouse basılı olup olmadığını takip et
+    const startX = useRef(0); // Başlangıç X koordinatı
+    const scrollLeftOffset = useRef(0); // Kaydırma başlangıçtaki offset değeri
 
     const filteredProducts = selectedCategory
         ? products.filter(product => product.category === selectedCategory)
@@ -24,6 +27,51 @@ export default function ProductsSection() {
         if (sliderRef.current) {
             sliderRef.current.scrollBy({ left: 300, behavior: 'smooth' });
         }
+    };
+
+    // Mouse ile kaydırma işlemi başlatıldığında
+    const handleMouseDown = (e: React.MouseEvent) => {
+        isMouseDown.current = true;
+        startX.current = e.clientX; // Başlangıç X koordinatını kaydet
+        scrollLeftOffset.current = sliderRef.current ? sliderRef.current.scrollLeft : 0;
+    };
+
+    // Mouse ile kaydırma işlemi devam ederken
+    const handleMouseMove = (e: React.MouseEvent) => {
+        if (!isMouseDown.current) return; // Eğer fare basılı değilse işlemi yapma
+        const xDiff = e.clientX - startX.current; // Fare hareketi
+        if (sliderRef.current) {
+            sliderRef.current.scrollLeft = scrollLeftOffset.current - xDiff; // Kaydırma
+        }
+    };
+
+    // Mouse ile kaydırma işlemi sona erdiğinde
+    const handleMouseUp = () => {
+        isMouseDown.current = false;
+    };
+
+    // Mouse ile kaydırma işlemi sona erdiğinde
+    const handleMouseLeave = () => {
+        isMouseDown.current = false;
+    };
+
+    // Mobilde dokunmatik kaydırma işlemleri
+    const handleTouchStart = (e: React.TouchEvent) => {
+        isMouseDown.current = true;
+        startX.current = e.touches[0].clientX; // Başlangıç X koordinatını kaydet
+        scrollLeftOffset.current = sliderRef.current ? sliderRef.current.scrollLeft : 0;
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        if (!isMouseDown.current) return; // Eğer fare basılı değilse işlemi yapma
+        const xDiff = e.touches[0].clientX - startX.current; // Dokunmatik hareketi
+        if (sliderRef.current) {
+            sliderRef.current.scrollLeft = scrollLeftOffset.current - xDiff; // Kaydırma
+        }
+    };
+
+    const handleTouchEnd = () => {
+        isMouseDown.current = false;
     };
 
     return (
@@ -44,7 +92,14 @@ export default function ProductsSection() {
                 <div
                     ref={sliderRef}
                     className="flex space-x-8 overflow-hidden"
-                    style={{width: 'calc(100% )'}} // Genişlik ayarı (oklar için boşluk bırakma)
+                    style={{ width: 'calc(100% )' }} // Genişlik ayarı (oklar için boşluk bırakma)
+                    onMouseDown={handleMouseDown}
+                    onMouseMove={handleMouseMove}
+                    onMouseUp={handleMouseUp}
+                    onMouseLeave={handleMouseLeave}
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
                 >
                     {categories.map((category) => (
                         <CategoryCard
@@ -56,7 +111,6 @@ export default function ProductsSection() {
                         />
                     ))}
                 </div>
-
 
                 {/* Sağ Ok */}
                 <button
@@ -80,7 +134,5 @@ export default function ProductsSection() {
                 ))}
             </div>
         </section>
-
-
     );
 }
