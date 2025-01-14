@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const navItems = [
     { href: '#products', label: 'Ürünlerimiz' },
@@ -25,8 +25,32 @@ export default function Navigation() {
         }
     };
 
+    // Boş alana tıklanınca menüyü kapat
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                isMenuOpen &&
+                !(
+                    event.target as HTMLElement
+                ).closest('nav') // Eğer tıklama `nav` içinde değilse
+            ) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        if (isMenuOpen) {
+            window.addEventListener('click', handleClickOutside);
+        } else {
+            window.removeEventListener('click', handleClickOutside);
+        }
+
+        return () => {
+            window.removeEventListener('click', handleClickOutside);
+        };
+    }, [isMenuOpen]);
+
     return (
-        <nav className="p-6">
+        <nav className="p-6 bg-amber-50">
             <div className="flex justify-between items-center">
                 {/* Logo */}
                 <div className="text-2xl font-bold text-amber-900">
@@ -45,8 +69,10 @@ export default function Navigation() {
             {/* Menü öğeleri */}
             <ul
                 className={`lg:flex flex-col lg:flex-row gap-8 mt-4 lg:mt-0 p-4 absolute lg:relative w-full lg:w-auto top-0 left-0 transition-transform ${
-                    isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full'
-                } lg:transform-none lg:block bg-transparent`}
+                    isMenuOpen
+                        ? 'transform translate-x-0 bg-amber-50'
+                        : 'transform -translate-x-full'
+                } lg:transform-none lg:block lg:bg-transparent`}
             >
                 {navItems.map(({ href, label }) => (
                     <li key={href} className="relative group">
